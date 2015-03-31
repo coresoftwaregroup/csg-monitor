@@ -30,10 +30,10 @@ def mail(to, subject, text):
     msg.attach(MIMEText(text))
     mailServer = smtplib.SMTP(monitor_config['mail_server'],
                               monitor_config['mail_server_port'])
-    mailServer.ehlo()
-    mailServer.starttls()
-    mailServer.ehlo()
-    mailServer.login(monitor_config['mail_user'], monitor_config['mail_pass'])
+    # mailServer.ehlo()
+    # mailServer.starttls()
+    # mailServer.ehlo()
+    # mailServer.login(monitor_config['mail_user'], monitor_config['mail_pass'])
     mailServer.sendmail(monitor_config['mail_user'], to, msg.as_string())
     mailServer.close()
 

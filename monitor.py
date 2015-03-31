@@ -82,8 +82,8 @@ class Monitor(object):
                                         server.url,
                                         server.status)
             message += text
-            for recipient in self.recipients:
-                mail(recipient, 'CSG Monitor', message)
+        for recipient in self.recipients:
+            mail(recipient, 'CSG Monitor', message)
 
     def get_servers(self, server_list):
         """takes list of dicts and return list of Server objects"""

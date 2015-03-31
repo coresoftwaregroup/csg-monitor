@@ -142,6 +142,7 @@ class Server:
                 self.fails += 1
                 self.status = 'ERROR'
 
+        print self.name, self.status
         return self
 
 if __name__ == "__main__":
